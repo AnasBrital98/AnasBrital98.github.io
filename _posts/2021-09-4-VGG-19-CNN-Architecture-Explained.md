@@ -7,8 +7,6 @@ Article_id : 4
 Image_cover : VGG-19.jpg
 ---
 
-### VGG-19 :
-
 **Paper :** [Very Deep Convolutional Networks for Large-Scale Image Recognition](https://arxiv.org/pdf/1409.1556.pdf)
 
 **Authors :** Karen Simonyan, Andrew Zisserman Visual Geometry Group, Department of Engineering Science, University of Oxford . 

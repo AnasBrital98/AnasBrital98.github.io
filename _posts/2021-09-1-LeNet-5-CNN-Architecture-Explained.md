@@ -7,8 +7,6 @@ Article_id : 1
 Image_cover : leNet5.jpg
 ---
 
-# LeNet-5 :
-
 **Paper :** [Gradient-Based Learning Applied to Document Recognition](http://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf) .
 
 **Authors :** Yann LeCun, Léon Bottou, Yoshua Bengio, and Patrick Haffner .

@@ -7,8 +7,6 @@ Article_id : 15
 Image_cover : knn.jpg
 ---
 
-## k-nearest Neighbours :
-
 The k-nearest neighbors is a simple supervised machine learning algorithm that can be used to solve both classification and regression problems , but in our case we're interested just in classification .
 
 

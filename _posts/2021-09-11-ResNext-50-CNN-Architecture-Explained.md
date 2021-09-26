@@ -7,8 +7,6 @@ Article_id : 11
 Image_cover : ResNext-50.jpg
 ---
 
-### ResNext-50 :
-
 **Paper :** [Aggregated Residual Transformations for Deep Neural Networks](https://arxiv.org/pdf/1611.05431.pdf).
 
 **Authors :** Saining Xie, Ross Girshick, Piotr Dollár, Zhuowen Tu, Kaiming He. University of California San Diego, Facebook Research .

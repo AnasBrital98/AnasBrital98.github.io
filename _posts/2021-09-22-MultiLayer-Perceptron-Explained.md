@@ -6,10 +6,8 @@ description: MultiLayer Perceptron Algorithm Explained .
 Article_id : 23
 Image_cover : mlp.jpg
 ---
+This Article contains :
 
-# MultiLayer Perceptron Story
-
-This Repository contains :
 * Simple Perceptron .
 * limitation of The Perceptron .
 * Gradient descent .

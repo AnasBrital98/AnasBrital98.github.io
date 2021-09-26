@@ -7,8 +7,6 @@ Article_id : 9
 Image_cover : Xception.jpg
 ---
 
-### Xception :
-
 **Paper :** [Xception: Deep Learning with Depthwise Separable Convolutions](https://arxiv.org/pdf/1610.02357.pdf).
 
 **Authors :** François Chollet. Google.

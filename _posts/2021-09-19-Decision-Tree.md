@@ -7,7 +7,6 @@ Article_id : 19
 Image_cover : decision-tree.jpg
 ---
 
-## Decision Tree :
 
 Decision Trees is a supervised learning Algorithm used to solve classification and regression problems . The goal is to create a model that predicts the value of a target variable by learning simple decision rules taken from the data features.
 

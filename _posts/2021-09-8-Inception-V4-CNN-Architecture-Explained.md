@@ -7,8 +7,6 @@ Article_id : 8
 Image_cover : Inception-V4.jpg
 ---
 
-### Inception-V4 :
-
 **Paper :** [Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning](https://arxiv.org/pdf/1602.07261.pdf).
 
 **Authors :** Christian Szegedy, Sergey Ioffe, Vincent Vanhoucke, Alex Alemi. Google.

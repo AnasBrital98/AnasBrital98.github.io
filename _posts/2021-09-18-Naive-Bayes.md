@@ -7,7 +7,6 @@ Article_id : 18
 Image_cover : naive-bayes.jpg
 ---
 
-## Naive Bayes :
 Naive Bayes classifier is a probabilistic machine learning model that’s used to solve classification problems , is actually based on the Bayes theorem.
 
 <div align="center" >

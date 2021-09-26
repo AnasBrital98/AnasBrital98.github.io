@@ -7,7 +7,6 @@ Article_id : 16
 Image_cover : svm.jpg
 ---
 
-## Support Vector Machine (SVM) :
 
 Support Vector Machine or SVM is a supervised learning Algorithm used for classification and regression problems. 
 SVM can solve linear and non-linear problems , The idea behind SVM is very simple , the algorithm try to create a line that can separate the classes .

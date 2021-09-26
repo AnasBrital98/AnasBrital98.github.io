@@ -7,8 +7,6 @@ Article_id : 7
 Image_cover : Inception-V3.jpg
 ---
 
-### Inception-V3 :
-
 **Paper :** [Rethinking the Inception Architecture for Computer Vision](https://arxiv.org/pdf/1512.00567.pdf) .
 
 **Authors :** Christian Szegedy, Vincent Vanhoucke, Sergey Ioffe, Jonathon Shlens, Zbigniew Wojna. Google, University College London .

@@ -7,8 +7,6 @@ Article_id : 10
 Image_cover : ResNet-50.jpg
 ---
 
-### ResNet-50 :
-
 **Paper :** [Deep Residual Learning for Image Recognition](https://arxiv.org/pdf/1512.03385.pdf).
 
 **Authors :** Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun. Microsoft .

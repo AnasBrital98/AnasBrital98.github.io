@@ -7,8 +7,6 @@ Article_id : 5
 Image_cover : Inception-V1.jpg
 ---
 
-### Inception-V1 (GoogLeNet) :
-
 **Paper :** [Going Deeper with Convolutions](https://arxiv.org/pdf/1409.4842.pdf) .
 
 **Authors :** Christian Szegedy, Wei Liu, Yangqing Jia, Pierre Sermanet, Scott Reed, Dragomir Anguelov, Dumitru Erhan, Vincent Vanhoucke, Andrew Rabinovich. Google, University of Michigan, University of North Carolina .

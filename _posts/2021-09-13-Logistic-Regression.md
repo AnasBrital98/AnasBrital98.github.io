@@ -7,7 +7,6 @@ Article_id : 13
 Image_cover : logistic-regression.jpg
 ---
 
-## Logistic Regression :
 Logistic regression is a Binary Classification Algorithm , The Idea is very Simple we train The Model with a list of couples (x_i , y_i) to figure out The best Coefficient m and b that will fit our data .
 
 <div align="center" >

@@ -1,13 +1,12 @@
 ---
 layout: post
-title:  Linear Regression Architecture Explained .
+title:  Linear Regression Algorithm Explained .
 date:   2021-09-12 13:20:00
 description: Linear Regression Algorithm Explained and Implemented Using Python.
 Article_id : 12
 Image_cover : linear-regression.jpg
 ---
 
-## Linear Regression :
 Linear regression is a linear approach for modelling the relationship between X and Y , where X is The Input Data and Y is The Target .
 
 <div align="center" >
