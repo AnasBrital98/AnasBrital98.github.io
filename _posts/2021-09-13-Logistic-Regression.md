@@ -19,7 +19,7 @@ Then we apply an Activation Function called **logistic Function** or **Sigmoid**
 <img src="{{ site.baseurl }}/assets/img/13/sigmoid.png" width="300">
 </div>
 
-what we're trying to do is we try to find A line ( Y = m*X + b ) that will split our data to two classes , class 0 where activation(Predicted value) > 0.5 , class 1 where activation(Predicted value) < 0.5 .
+what we're trying to do is we try to find A line ( Y = m*X + b ) that will split our data to two classes , class 0 where activation(Predicted value) >= 0.5 , class 1 where activation(Predicted value) < 0.5 .
 
 The Cost Function Used in this Example is **Log-Loss** and it defined as following :
 
@@ -127,7 +127,6 @@ L_regression.didplayTheModel(x, y)
 </div>
 
 #### The Loss of The Model :
-
 
 <div align="center" >
 <img src="{{ site.baseurl }}/assets/img/13/LogisticRegressionLoss.png" width="300">

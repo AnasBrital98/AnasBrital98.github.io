@@ -12,8 +12,8 @@ This Article contains :
 * limitation of The Perceptron .
 * Gradient descent .
 * Mono Layer Perceptron with Gradient Descent .
-* Multi Layer Perceptron for Binary Classification .
-* Multi Layer Perceptron for Multiple Classification .
+* Multi Layer Perceptron for Binary Classification problems.
+* Multi Layer Perceptron for Multi-class Classification problems.
 * Model Evaluation (Confusion Matrix).
 
 ---
@@ -193,14 +193,14 @@ we use the term log loss for binary classification problems, and the more genera
 * Log Loss Formula : 
 
 <div align="center" >
-<img src="{{ site.baseurl }}/assets/img/23/LogLoss.png" width="80%" height="100">
+<img src="{{ site.baseurl }}/assets/img/23/LogLoss.png" width="60%" height="80%">
 </div>
 
 
 * Cross-entropy Formula : 
 
 <div align="center" >
-<img src="{{ site.baseurl }}/assets/img/23/crossEntropy.png" width="80%" height="100">
+<img src="{{ site.baseurl }}/assets/img/23/crossEntropy.png" width="60%" height="80%">
 </div>
 
 ---
@@ -208,7 +208,7 @@ we use the term log loss for binary classification problems, and the more genera
 In This section we will use Gradient Descent as an algorithm for Optimizing our Model :
 
 <div align="center" >
-<img src="{{ site.baseurl }}/assets/img/23/gradientDescentGraph.png" width="80%" height="80%">
+<img src="{{ site.baseurl }}/assets/img/23/gradientDescentGraph.png" width="60%" height="60%">
 </div>
 
 now let apply the gradient descent to a simple Function to understand how it works :

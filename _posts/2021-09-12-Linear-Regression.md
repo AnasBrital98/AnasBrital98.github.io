@@ -16,14 +16,16 @@ Linear regression is a linear approach for modelling the relationship between X 
 So linear regression consists of finding the coefficients m and b so that Y = m * X + b.
 
 The Question now how can we find those coefficients :
+
 - we can try guess and check ??? (it not a good idea believe me) . 
+
 - we can Use Gradient Descent to find them .
 
 <div align="center" >
 <img src="{{ site.baseurl }}/assets/img/12/gradientDescentGraph.png" width="300">
 </div>
 
-Gradient descent is a first-order iterative optimization algorithm for finding a local minimum of a differentiable function. The idea is to take repeated steps in the opposite direction of the gradient (or approximate gradient) of the function at the current point, because this is the direction of steepest descent. Conversely, stepping in the direction of the gradient will lead to a local maximum of that function; the procedure is then known as gradient ascent. [[1]](https://en.wikipedia.org/wiki/Gradient_descent)  
+Gradient descent is a first-order iterative optimization algorithm for finding a local minimum of a differentiable function. The idea is to take repeated steps in the opposite direction of the gradient (or approximate gradient) of the function at the current point, because this is the direction of steepest descent. Conversely, stepping in the direction of the gradient will lead to a local maximum of that function . [[1]](https://en.wikipedia.org/wiki/Gradient_descent)  
 
 The Cost Function Used in this Example is **Log-Loss** and it defined as following :
 
@@ -92,7 +94,6 @@ class LinearRegression:
 def MSE(y_true , y_pred):
     return 1 / len(y_true) * np.sum((y_true - y_hat) ** 2)
 
-
 x , y = make_regression(n_samples=200 , n_features=1 , noise=0)
 x_train , x_test , y_train , y_test = train_test_split(x,y , test_size=0.25)
         
@@ -101,7 +102,6 @@ L_Regression.fit(x_train, y_train)
 L_Regression.train()
 y_hat = L_Regression.predict(x_test)
 L_Regression.displayTheModel(x_test, y_test, y_hat)            
-
 
 print("MSE : ",MSE(y_test , y_hat))
 
