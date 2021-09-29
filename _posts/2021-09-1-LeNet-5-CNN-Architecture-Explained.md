@@ -14,7 +14,7 @@ Image_cover : leNet5.jpg
 **Published in:** Proceedings of the IEEE 1998 . 
 
 <div align="center" >
-<img src="{{ site.baseurl }}/assets/img/1/LeNet5.png" width="80%" height="80%">
+<img src="{{ site.baseurl }}/assets/img/1/LeNet5-Architecture.jpg" width="80%" height="80%">
 </div>
 
 let Apply our Formulas and see how an input Image with 32 * 32 * 1 size become a Vector with 100 length .
