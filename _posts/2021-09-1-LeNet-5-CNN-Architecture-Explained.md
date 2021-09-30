@@ -12,7 +12,7 @@ Image_cover : leNet5.jpg
 **Authors :** Yann LeCun, Léon Bottou, Yoshua Bengio, and Patrick Haffner .
 
 **Published in:** Proceedings of the IEEE 1998 . 
-
+**Model Architecture :** 
 <div align="center" >
 <img src="{{ site.baseurl }}/assets/img/1/LeNet-5-Architecture.svg" width="800px" height="300px">
 </div>

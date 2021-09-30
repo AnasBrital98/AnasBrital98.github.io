@@ -12,6 +12,7 @@ Image_cover : AlexNet.jpg
 **Authors :** Alex Krizhevsky, Ilya Sutskever, Geoffrey Hinton. University of Toronto, Canada.
 
 **Published in :** NeurIPS 2012 .
+**Model Architecture :** 
 
 <div align="center" >
 <img src="{{ site.baseurl }}/assets/img/2/AlexNet-Architecture.svg" width="800px" height="300px">

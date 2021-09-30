@@ -16,7 +16,7 @@ Image_cover : VGG-19.jpg
 **Model Architecture :** 
 
 <div align="center" >
-<img src="{{ site.baseurl }}/assets/img/4/VGG19.PNG" width="100" height="400">
+<img src="{{ site.baseurl }}/assets/img/4/VGG-19-Architecture.svg" width="600px" height="300px">
 </div>
 
 **Keras :**
