@@ -14,7 +14,7 @@ Image_cover : AlexNet.jpg
 **Published in :** NeurIPS 2012 .
 
 <div align="center" >
-<img src="{{ site.baseurl }}/assets/img/2/AlexNet-Architecture.jpg" width="80%" height="80%">
+<img src="{{ site.baseurl }}/assets/img/2/AlexNet-Architecture.svg" width="800px" height="300px">
 </div>
 
 **keras :**
