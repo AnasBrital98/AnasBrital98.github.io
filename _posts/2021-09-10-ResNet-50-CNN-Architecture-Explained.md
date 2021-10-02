@@ -15,9 +15,17 @@ Image_cover : ResNet-50.jpg
 
 **Model Architecture :** 
 <div align="center" >
-<img src="{{ site.baseurl }}/assets/img/10/ResNet50.png" width="500" height="500">
+<img src="{{ site.baseurl }}/assets/img/10/ResNet50.svg" width="600px" height="300px">
 </div>
 
+<b>Conv Block : </b>
+<div align="center" >
+<img src="{{ site.baseurl }}/assets/img/10/ConvBlock.svg" width="600px" height="300px">
+</div>
+<b>Identity Block : </b>
+<div align="center" >
+<img src="{{ site.baseurl }}/assets/img/10/IdentityBlock.svg" width="600px" height="300px">
+</div>
 
 **keras :**
 

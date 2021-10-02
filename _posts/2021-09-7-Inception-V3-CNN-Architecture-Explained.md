@@ -14,8 +14,38 @@ Image_cover : Inception-V3.jpg
 **Published in :** 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR) .
 
 **Model Architecture :** 
+
 <div align="center" >
-<img src="{{ site.baseurl }}/assets/img/7/InceptionV3Architecture.png" width="200" height="700">
+<img src="{{ site.baseurl }}/assets/img/7/InceptionV3.svg" width="600px" height="300px">
+</div>
+
+<b>Stem Block : </b>
+<div align="center" >
+<img src="{{ site.baseurl }}/assets/img/7/Stem.svg" width="600px" height="300px">
+</div>
+<b>Inception-A Block : </b>
+<div align="center" >
+<img src="{{ site.baseurl }}/assets/img/7/InceptionA.svg" width="600px" height="300px">
+</div>
+<b>Inception-B Block : </b>
+<div align="center" >
+<img src="{{ site.baseurl }}/assets/img/7/InceptionB.svg" width="600px" height="300px">
+</div>
+<b>Inception-C Block : </b>
+<div align="center" >
+<img src="{{ site.baseurl }}/assets/img/7/InceptionC.svg" width="600px" height="300px">
+</div>
+<b>Reduction-A Block : </b>
+<div align="center" >
+<img src="{{ site.baseurl }}/assets/img/7/ReductionA.svg" width="600px" height="300px">
+</div>
+<b>Reduction-B Block : </b>
+<div align="center" >
+<img src="{{ site.baseurl }}/assets/img/7/ReductionB.svg" width="600px" height="300px">
+</div>
+<b>Auxiliary Classifier Block : </b>
+<div align="center" >
+<img src="{{ site.baseurl }}/assets/img/7/auxiliary_classifier.svg" width="600px" height="300px">
 </div>
 
 **keras :**

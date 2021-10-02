@@ -14,8 +14,22 @@ Image_cover : Inception-V1.jpg
 **Published in :** 2015 IEEE Conference on Computer Vision and Pattern Recognition (CVPR) .
 
 **Model Architecture :** 
+
 <div align="center" >
-<img src="{{ site.baseurl }}/assets/img/5/InceptionV1Architecture.png" width="200" height="700">
+<img src="{{ site.baseurl }}/assets/img/5/InceptionV1.svg" width="600px" height="300px">
+</div>
+
+<b>Stem Block : </b>
+<div align="center" >
+<img src="{{ site.baseurl }}/assets/img/5/StemBlock.svg" width="600px" height="300px">
+</div>
+<b>Inception Block : </b>
+<div align="center" >
+<img src="{{ site.baseurl }}/assets/img/5/InceptionBlock.svg" width="600px" height="300px">
+</div>
+<b>Auxiliary classifier Block : </b>
+<div align="center" >
+<img src="{{ site.baseurl }}/assets/img/5/auxiliary_classifier.svg" width="600px" height="300px">
 </div>
 
 **keras :**

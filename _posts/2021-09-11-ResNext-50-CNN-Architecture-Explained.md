@@ -14,11 +14,20 @@ Image_cover : ResNext-50.jpg
 **Published in :** 2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR) .
 
 **Model Architecture :** 
-ResNext Architecture it an improvement to ResNet Architecture , The Difference Between Them is in The Figure bellow  .
-
 <div align="center" >
-<img src="{{ site.baseurl }}/assets/img/11/ResNetVsResNext.png" width="500" height="500">
+<img src="{{ site.baseurl }}/assets/img/11/ResNeXt50.svg" width="600px" height="300px">
 </div>
+
+<b>Conv Block : </b>
+<div align="center" >
+<img src="{{ site.baseurl }}/assets/img/11/ConvBlock.svg" width="600px" height="300px">
+</div>
+
+<b>Identity Block : </b>
+<div align="center" >
+<img src="{{ site.baseurl }}/assets/img/11/IdentityBlock.svg" width="600px" height="300px">
+</div>
+
 
 
 **keras :**

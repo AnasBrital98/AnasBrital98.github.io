@@ -13,6 +13,42 @@ Image_cover : Inception-V4.jpg
 
 **Published in :** Proceedings of the Thirty-First AAAI Conference on Artificial Intelligence .
 
+**Model Architecture :** 
+
+<div align="center" >
+<img src="{{ site.baseurl }}/assets/img/8/InceptionV4.svg" width="600px" height="300px">
+</div>
+
+<b>Stem Block : </b>
+<div align="center" >
+<img src="{{ site.baseurl }}/assets/img/8/Stem.svg" width="600px" height="300px">
+</div>
+<b>Inception-A Block : </b>
+<div align="center" >
+<img src="{{ site.baseurl }}/assets/img/8/InceptionA.svg" width="600px" height="300px">
+</div>
+<b>Inception-B Block : </b>
+<div align="center" >
+<img src="{{ site.baseurl }}/assets/img/8/InceptionB.svg" width="600px" height="300px">
+</div>
+<b>Inception-C Block : </b>
+<div align="center" >
+<img src="{{ site.baseurl }}/assets/img/8/InceptionC.svg" width="600px" height="300px">
+</div>
+<b>Reduction-A Block : </b>
+<div align="center" >
+<img src="{{ site.baseurl }}/assets/img/8/ReductionA.svg" width="600px" height="300px">
+</div>
+<b>Reduction-B Block : </b>
+<div align="center" >
+<img src="{{ site.baseurl }}/assets/img/8/ReductionB.svg" width="600px" height="300px">
+</div>
+<b>Auxiliary Classifier Block : </b>
+<div align="center" >
+<img src="{{ site.baseurl }}/assets/img/8/auxiliary_classifier.svg" width="600px" height="300px">
+</div>
+
+
 **keras :**
 
 {% highlight python linenos %}
