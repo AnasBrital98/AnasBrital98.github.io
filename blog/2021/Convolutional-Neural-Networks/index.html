@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>
+
+  Anas Brital
+
+
+  | Convolutional Neural Networks (CNN).
+
+</title>
+<meta name="description" content="This is my personal blog where I share my thoughts and what I've learned until now .
+">
+
+<!-- Open Graph -->
+
+
+<!-- Bootstrap & MDB -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" integrity="sha512-RO38pBRxYH3SoOprtPTD86JFOclM51/XTIdEPh5j8sj4tp8jmQIx26twG52UaLi//hQldfrh7e51WzP9wuP32Q==" crossorigin="anonymous" />
+
+<!-- Fonts & Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"  integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+<!-- Code Syntax Highlighting -->
+<link rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/github.css" />
+
+<!-- Styles -->
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍🎓</text></svg>">
+
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="canonical" href="/blog/2021/Convolutional-Neural-Networks/">
+
+<!-- JQuery -->
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+
+<!-- Theming-->
+
+<script src="/assets/js/theme.js"></script>
+<script src="/assets/js/dark_mode.js"></script>
+
+
+
+
+
+
+    
+<!-- MathJax -->
+<script type="text/javascript">
+  window.MathJax = {
+    tex: {
+      tags: 'ams'
+    }
+  };
+</script>
+<script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+<script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+
+  </head>
+
+  <body class="fixed-top-nav">
+
+    <!-- Header -->
+
+    <header>
+
+    <!-- Nav Bar -->
+    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+    <div class="container">
+      
+      <a class="navbar-brand title font-weight-lighter" href="/">
+       Anas Brital
+      </a>
+      
+      <!-- Navbar Toggle -->
+      <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          <!-- About -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/">
+              about
+              
+            </a>
+          </li>
+          
+          <!-- Blog -->
+          <li class="nav-item active">
+            <a class="nav-link" href="/blog/">
+              blog
+              
+            </a>
+          </li>
+          
+          <!-- Other pages -->
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            <div class = "toggle-container">
+              <a id = "light-toggle">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+              </a>
+            </div>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</header>
+
+
+    <!-- Content -->
+
+    <div class="container mt-5">
+      
+
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Convolutional Neural Networks (CNN).</h1>
+    <p class="post-meta">September 23, 2021</p>   
+  </header>
+
+  <article class="post-content">
+    <h3 id="introduction-">Introduction :</h3>
+
+<p><img align="right" width="40%" src="/assets/img/22/cnn-image.jpg" /></p>
+
+<p>The Convolutional Neural Network, known as CNN (Convolutional Neural Network), is one of the deep learning algorithms that is the development of the Multilayer Perceptron (MLP) designed to process data in the form of a Matrix (image, sound …).</p>
+
+<p>Convolutional Neural Networks are used in many fields, but we will just be interested in the application of CNNs to Images.</p>
+
+<p><strong>The question now is, what is an Image?</strong></p>
+
+<p>Image is Just a Matrix of Pixels .</p>
+
+<div align="center">
+<img src="/assets/img/22/pixels.jpg" width="400" height="200" />
+</div>
+
+<p><strong>Coding Modes of an Image:</strong></p>
+
+<div align="center">
+<img src="/assets/img/22/Codage.jpg" width="400" height="200" />
+</div>
+
+<hr />
+<h3 id="convolutional-neural-network-vs-multilayer-perceptron-">Convolutional Neural Network vs Multilayer Perceptron :</h3>
+
+<p>Imagine with me that we’ve an Image classification problem to solve , and we’ve only one choice which is Multilayer Perceptron (Neural Network ) , and The images they have 240 height and 240 width and we’re Using RGB.</p>
+
+<p>do you know that we need to build a Neural Network with 240 * 240 * 3 = 172 800 Input which is a very big Neural Network , and it will be very hard for as to train it .</p>
+
+<p><strong>Can we find a solution that reduces the size of the images and preserves the Characteristics ?</strong></p>
+
+<p>This is Exactly What CNN Can Do .</p>
+
+<div align="center">
+<img src="/assets/img/22/cnn-vs-mlp.png" width="400" height="200" />
+</div>
+
+<p>In General :</p>
+
+<p>CNN = Convolutional Layers + Activation Layers + Pooling Layers + Fully Connected Layers .</p>
+
+<div align="center">
+<img src="/assets/img/22/cnnlayers.png" width="400" height="200" />
+</div>
+
+<hr />
+<h3 id="convolutional-neural-network-layers-">Convolutional Neural Network Layers :</h3>
+
+<h4 id="kernels-or-filters-in-the-convolutional-layer--">Kernels or Filters in The Convolutional layer  :</h4>
+
+<p>In the convolutional neural network, the Kernel is nothing more than a filter used to extract features from images. The kernel is a matrix that moves over the input data, performs the dot product with the input data subregion, and obtains the output as a dot product matrix. The kernel moves on the input data by the stride value.</p>
+
+<div align="center">
+<img src="/assets/img/22/kernels.png" width="350" height="250" />
+</div>
+
+<p>There is a lot Kernels , each one is responsible for extracting a specific Feature.</p>
+
+<div align="center">
+<img src="/assets/img/22/kernels-examples.png" width="350" height="250" />
+</div>
+
+<h4 id="convolutional-layers-">Convolutional Layers :</h4>
+
+<p>The Convolution Layer Extract The Characteristics of The Image By Performing this operation To The Input Image :</p>
+
+<div align="center">
+<img src="/assets/img/22/conv.gif" width="300" height="150" />
+</div>
+
+<p>The Convolutional Layer produce an Output Image with this Formula :</p>
+
+<div align="center">
+<img src="/assets/img/22/ConvOutputFormula.png" width="300" height="150" />
+</div>
+
+<p>The Convolutional Layer needs Two Parameters to work :</p>
+
+<ul>
+  <li>Padding :  the amount of pixels added to an image when it is being processed by the kernel of a CNN.</li>
+  <li>Stride : Stride is the number of pixels shifts over the input matrix .</li>
+</ul>
+
+<p><strong>Example 1 :</strong> Stride = 1 , Padding = 0 :</p>
+
+<div align="center">
+<img src="/assets/img/22/conv-ex1.png" width="350" height="200" />
+</div>
+
+<p>if we Applied our Formula (In The Picture above) we’ll get The Same Result .</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">output</span> <span class="n">width</span> <span class="o">=</span> <span class="p">(</span><span class="n">input_width</span> <span class="o">-</span> <span class="n">kernel_width</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">padding</span><span class="p">)</span> <span class="o">/</span> <span class="n">stride_width</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="n">output</span> <span class="n">height</span> <span class="o">=</span> <span class="p">(</span><span class="n">input_height</span> <span class="o">-</span> <span class="n">kernel_height</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">padding</span><span class="p">)</span> <span class="o">/</span> <span class="n">stride_height</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="nb">input</span> <span class="n">Image</span> <span class="p">:</span> <span class="mi">6</span><span class="o">*</span><span class="mi">6</span>
+<span class="n">Kernel</span> <span class="n">Size</span> <span class="p">:</span> <span class="mi">2</span><span class="o">*</span><span class="mi">2</span>
+
+<span class="n">output</span> <span class="n">width</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">0</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">output</span> <span class="n">height</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">0</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">5</span></code></pre></figure>
+
+<p><strong>Example 2 :</strong> Stride = 2 , Padding = 0 :</p>
+
+<div align="center">
+<img src="/assets/img/22/conv-ex2.png" width="350" height="200" />
+</div>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="nb">input</span> <span class="n">Image</span> <span class="p">:</span> <span class="mi">6</span><span class="o">*</span><span class="mi">6</span>
+<span class="n">Kernel</span> <span class="n">Size</span> <span class="p">:</span> <span class="mi">2</span><span class="o">*</span><span class="mi">2</span>
+
+<span class="n">output</span> <span class="n">width</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">0</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">output</span> <span class="n">height</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">0</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">3</span></code></pre></figure>
+
+<p><strong>Example 3 :</strong> Stride = 2 , Padding = 1 :</p>
+
+<div align="center">
+<img src="/assets/img/22/conv-ex3.png" width="350" height="200" />
+</div>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="nb">input</span> <span class="n">Image</span> <span class="p">:</span> <span class="mi">6</span><span class="o">*</span><span class="mi">6</span>
+<span class="n">Kernel</span> <span class="n">Size</span> <span class="p">:</span> <span class="mi">2</span><span class="o">*</span><span class="mi">2</span>
+
+<span class="n">output</span> <span class="n">width</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">output</span> <span class="n">height</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">4</span></code></pre></figure>
+
+<p>In All The Examples Above we was talking about Convolution 2D , now let See The general Case which is Convolution 3D :</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">Input</span> <span class="n">Image</span> <span class="p">:</span> <span class="n">W1</span><span class="err">×</span><span class="n">H1</span><span class="err">×</span><span class="n">D1</span> <span class="p">.</span>
+<span class="n">Number</span> <span class="n">of</span> <span class="n">filters</span> <span class="p">:</span> <span class="n">K</span> <span class="p">(</span><span class="n">With</span> <span class="n">Size</span> <span class="n">F</span><span class="o">*</span><span class="n">F</span><span class="p">).</span>
+<span class="n">the</span> <span class="n">stride</span>  <span class="p">:</span> <span class="n">S</span> <span class="p">.</span>
+<span class="n">Padding</span> <span class="p">:</span> <span class="n">P</span> <span class="p">.</span>
+<span class="n">Output</span> <span class="p">:</span> 
+<span class="n">W2</span> <span class="o">=</span> <span class="p">(</span><span class="n">W1</span><span class="err">−</span><span class="n">F</span><span class="o">+</span><span class="mi">2</span><span class="n">P</span><span class="p">)</span><span class="o">/</span><span class="n">S</span><span class="o">+</span><span class="mi">1</span> <span class="p">.</span>
+           <span class="n">H2</span> <span class="o">=</span> <span class="p">(</span><span class="n">H1</span><span class="err">−</span><span class="n">F</span><span class="o">+</span><span class="mi">2</span><span class="n">P</span><span class="p">)</span><span class="o">/</span><span class="n">S</span><span class="o">+</span><span class="mi">1</span> <span class="p">.</span>
+           <span class="n">D2</span> <span class="o">=</span> <span class="n">K</span> <span class="p">.</span></code></pre></figure>
+
+<div align="center">
+<img src="/assets/img/22/conv-3d.gif" width="350" height="250" />
+</div>
+
+<h4 id="activation-function-in-the-convolutional-layer-">Activation Function in The Convolutional layer :</h4>
+
+<p>The activation function used in CNN networks is RELU and it is defined as follows:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">RELU</span> <span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="o">=</span> <span class="nb">max</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span></code></pre></figure>
+
+<div align="center">
+<img src="/assets/img/22/ReluGraph.png" width="300" height="200" />
+</div>
+
+<h4 id="pooling-layer-">Pooling Layer :</h4>
+
+<p>The Pooling Layer Reduce The Size of The Image , there is two type of Pooling :</p>
+
+<ul>
+  <li>Max Pooling .</li>
+  <li>AVG Pooling .</li>
+</ul>
+
+<div align="center">
+<img src="/assets/img/22/MaxAvg.png" width="400" height="280" />
+</div>
+
+<p>The Output Of The Pooling Layer Can be calculated Using This Formula :</p>
+
+<div align="center">
+<img src="/assets/img/22/Pooling-Formula.png" width="300" height="100" />
+</div>
+
+<h5 id="max-pooling-">Max Pooling :</h5>
+
+<div align="center">
+<img src="/assets/img/22/MaxPool.png" width="400" height="250" />
+</div>
+
+<h5 id="avg-pooling-">AVG Pooling :</h5>
+
+<div align="center">
+<img src="/assets/img/22/AvgPool.png" width="400" height="250" />
+</div>
+
+<h4 id="fully-connected-layer-">Fully Connected Layer :</h4>
+
+<p>fully connected layer it can be seen as one layer of a simple Neural Network .</p>
+
+<div align="center">
+<img src="/assets/img/22/fully-connected-layer.PNG" width="300" height="150" />
+</div>
+
+<hr />
+<h3 id="different-layers-in-keras-and-pytorch-">Different Layers in <strong>Keras</strong> and <strong>pyTorch</strong> :</h3>
+
+<h3 id="keras-"><strong>Keras</strong> :</h3>
+
+<p><img align="right" width="30%" src="/assets/img/22/keras.png" /></p>
+
+<p>Keras is an open-source software library that provides a Python interface for artificial neural networks. Keras acts as an interface for the TensorFlow library.</p>
+
+<ul>
+  <li>Convolution Layer :</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">layers</span><span class="p">.</span><span class="n">Conv2D</span><span class="p">(</span>
+    <span class="n">filters</span><span class="p">,</span>
+    <span class="n">kernel_size</span><span class="p">,</span>
+    <span class="n">strides</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="n">padding</span><span class="o">=</span><span class="s">"valid"</span><span class="p">,</span>
+    <span class="n">data_format</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">dilation_rate</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="n">groups</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">activation</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">use_bias</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+    <span class="n">kernel_initializer</span><span class="o">=</span><span class="s">"glorot_uniform"</span><span class="p">,</span>
+    <span class="n">bias_initializer</span><span class="o">=</span><span class="s">"zeros"</span><span class="p">,</span>
+    <span class="n">kernel_regularizer</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">bias_regularizer</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">activity_regularizer</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">kernel_constraint</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">bias_constraint</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">kwargs</span>
+<span class="p">)</span></code></pre></figure>
+
+<ul>
+  <li>Activation Layer :</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">activations</span><span class="p">.</span><span class="n">relu</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code></pre></figure>
+
+<ul>
+  <li>
+    <p>Pooling Layer :</p>
+
+    <ul>
+      <li>Max-Pooling :</li>
+    </ul>
+  </li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">layers</span><span class="p">.</span><span class="n">MaxPooling2D</span><span class="p">(</span>
+    <span class="n">pool_size</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">strides</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s">"valid"</span><span class="p">,</span> <span class="n">data_format</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+    <span class="p">)</span>
+    </code></pre></figure>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* Avg-Pooling :
+</code></pre></div></div>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">layers</span><span class="p">.</span><span class="n">AveragePooling2D</span><span class="p">(</span>
+    <span class="n">pool_size</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">strides</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s">"valid"</span><span class="p">,</span> <span class="n">data_format</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+    <span class="p">)</span>
+    </code></pre></figure>
+
+<ul>
+  <li>Dropout Layer :</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">layers</span><span class="p">.</span><span class="n">Dropout</span><span class="p">(</span><span class="n">rate</span><span class="p">,</span> <span class="n">noise_shape</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code></pre></figure>
+
+<ul>
+  <li>Dense Layer or Fully Connected Layer :</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">layers</span><span class="p">.</span><span class="n">Dense</span><span class="p">(</span>
+    <span class="n">units</span><span class="p">,</span>
+    <span class="n">activation</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">use_bias</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+    <span class="n">kernel_initializer</span><span class="o">=</span><span class="s">"glorot_uniform"</span><span class="p">,</span>
+    <span class="n">bias_initializer</span><span class="o">=</span><span class="s">"zeros"</span><span class="p">,</span>
+    <span class="n">kernel_regularizer</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">bias_regularizer</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">activity_regularizer</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">kernel_constraint</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">bias_constraint</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">kwargs</span>
+<span class="p">)</span></code></pre></figure>
+
+<h3 id="pytorch-"><strong>pyTorch</strong> :</h3>
+
+<p><img align="right" width="30%" src="/assets/img/22/pyTorch.png" /></p>
+
+<p>PyTorch is an open source machine learning library based on the Torch library, used for applications such as computer vision and natural language processing, primarily developed by Facebook’s AI Research lab. It is free and open-source software released under the Modified BSD license.</p>
+
+<ul>
+  <li>Convolution Layer :</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">torch</span><span class="p">.</span><span class="n">nn</span><span class="p">.</span><span class="n">Conv2d</span><span class="p">(</span><span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dilation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">padding_mode</span><span class="o">=</span><span class="s">'zeros'</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span></code></pre></figure>
+
+<ul>
+  <li>Activation Layer :</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">torch</span><span class="p">.</span><span class="n">nn</span><span class="p">.</span><span class="n">ReLU</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span></code></pre></figure>
+
+<ul>
+  <li>
+    <p>Pooling Layer :</p>
+
+    <ul>
+      <li>Max-Pooling :</li>
+    </ul>
+  </li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="n">torch</span><span class="p">.</span><span class="n">nn</span><span class="p">.</span><span class="n">MaxPool2d</span><span class="p">(</span><span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dilation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">return_indices</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">ceil_mode</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    </code></pre></figure>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* Avg-Pooling :
+</code></pre></div></div>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="n">torch</span><span class="p">.</span><span class="n">nn</span><span class="p">.</span><span class="n">AvgPool2d</span><span class="p">(</span><span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ceil_mode</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">count_include_pad</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">divisor_override</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+    </code></pre></figure>
+
+<ul>
+  <li>Dropout Layer :</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">torch</span><span class="p">.</span><span class="n">nn</span><span class="p">.</span><span class="n">Dropout</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span></code></pre></figure>
+
+<ul>
+  <li>Dense Layer or Fully Connected Layer :</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">torch</span><span class="p">.</span><span class="n">nn</span><span class="p">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">in_features</span><span class="p">,</span> <span class="n">out_features</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span></code></pre></figure>
+
+<hr />
+<p><strong>References :</strong></p>
+
+<ul>
+  <li>
+    <p><a href="https://en.wikipedia.org/wiki/Convolutional_neural_network">Convolutional neural network</a>.</p>
+  </li>
+  <li>
+    <p><a href="https://towardsdatascience.com/illustrated-10-cnn-architectures-95d78ace614d">Illustrated: 10 CNN Architectures</a>.</p>
+  </li>
+  <li>
+    <p><a href="https://en.wikipedia.org/wiki/Multilayer_perceptron">Multilayer perceptron</a>.</p>
+  </li>
+</ul>
+
+  </article>
+
+</div>
+
+    </div>
+  </body>
+
+  <!-- Bootsrap & MDB scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js" integrity="sha512-eUQ9hGdLjBjY3F41CScH3UX+4JDSI9zXeroz7hJ+RteoCaY+GP/LDoM8AO+Pt+DRFw3nXqsjh9Zsts8hnYv8/A==" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha512-M5KW3ztuIICmVIhjSqXe01oV2bpe248gOxqmlcYrEzAvws7Pw3z6BK0iGbrwvdrUQUhi3eXgtxp5I8PDo9YfjQ==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js" integrity="sha512-Mug9KHKmroQFMLm93zGrjhibM2z2Obg9l6qFG2qKjXEXkMp/VDkI4uju9m4QKPjWSwQ6O2qzZEnJDEeCw0Blcw==" crossorigin="anonymous"></script>
+
+  
+<!-- Mansory & imagesLoaded -->
+<script defer src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script defer src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script defer src="/assets/js/mansory.js" type="text/javascript"></script>
+
+
+  
+
+
+<!-- Medium Zoom JS -->
+<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+<script src="/assets/js/zoom.js"></script>
+
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+</html>
